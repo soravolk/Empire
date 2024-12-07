@@ -69,14 +69,20 @@ export default function ShortTerm() {
       </div>
       {isOverlayVisible && (
         <div className="flex justify-center items-center fixed inset-0 bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded shadow-lg w-5/6 h-96">
-            <span className="block mb-4">show contents of each cycle</span>
-            <button
-              onClick={toggleOverlay}
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-            >
-              Close
-            </button>
+          <div className="flex bg-white p-6 rounded shadow-lg w-5/6 h-96">
+            <div className="flex-1">
+              <span className="block mb-4">show contents of each cycle</span>
+            </div>
+            <div className="w-px bg-gray-300 mx-4"></div>
+            <div className="flex-1">
+              <span className="block mb-4">handle details</span>
+              <button
+                onClick={toggleOverlay}
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}
